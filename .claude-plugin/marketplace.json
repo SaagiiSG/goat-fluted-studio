@@ -1,0 +1,13 @@
+{
+  "name": "goat-fluted-studio",
+  "owner": {
+    "name": "GOAT Academy"
+  },
+  "plugins": [
+    {
+      "name": "goat-fluted-studio",
+      "source": "./",
+      "description": "Fluted Studio · Ховилтой хана: dark ribbed-wall portfolio look with a photo-card fan for Reels/TikTok. Mongolian-first."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "goat-fluted-studio",
+  "version": "1.0.0",
+  "description": "Fluted Studio · Ховилтой хана: turns photos and clips into a reel on a dark ribbed studio wall with a diagonal light beam, a serif italic line over a huge condensed silver Mongolian headline, a status chip and a fan of photo cards. Renders a 1080x1920 MP4 for Reels/TikTok.",
+  "author": {
+    "name": "GOAT Academy"
+  },
+  "keywords": [
+    "video",
+    "editing",
+    "reels",
+    "tiktok",
+    "portfolio",
+    "photo-cards",
+    "studio",
+    "mongolian",
+    "ffmpeg"
+  ]
+}
