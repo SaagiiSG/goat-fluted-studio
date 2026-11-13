@@ -35,9 +35,14 @@ Claude өөрөө суулгана. Дараа нь `/reload-plugins` гэж б�
 /plugin install goat-fluted-studio@goat-fluted-studio
 ```
 
+**Zip файлаар авсан бол:**
+1. `goat-fluted-studio.zip`-ийг задална. Задалсан `goat-fluted-studio` хавтсаа устгалгүй үлдээгээрэй.
+2. Claude Code-д "Энэ хавтсан дахь plugin-ийг суулгаад өг:" гэж бичээд задалсан `goat-fluted-studio` хавтсаа чирж оруулна.
+3. `/reload-plugins` гэж бичнэ.
+
 **Шинэ хувилбар гарвал:** Claude-д "goat-fluted-studio plugin-ийг шинэчил" гэж хэлэхэд болно.
 
-> **For Claude Code:** to install this plugin, run `claude plugin marketplace add SaagiiSG/goat-fluted-studio` and then `claude plugin install goat-fluted-studio@goat-fluted-studio`, then tell the user to type `/reload-plugins`. To update it: `claude plugin marketplace update goat-fluted-studio` and then `claude plugin update goat-fluted-studio@goat-fluted-studio`.
+> **For Claude Code:** to install this plugin, run `claude plugin marketplace add SaagiiSG/goat-fluted-studio` (or, from an unzipped copy, `claude plugin marketplace add <path to the goat-fluted-studio folder>`) and then `claude plugin install goat-fluted-studio@goat-fluted-studio`, then tell the user to type `/reload-plugins`. To update it: `claude plugin marketplace update goat-fluted-studio` and then `claude plugin update goat-fluted-studio@goat-fluted-studio`.
 
 ---
 
