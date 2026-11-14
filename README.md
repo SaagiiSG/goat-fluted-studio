@@ -1,5 +1,7 @@
 # 🐐 Fluted Studio · Ховилтой хана
 
+<p align="center"><img src="assets/poster.jpg" width="300" alt="Fluted Studio · Ховилтой хана"></p>
+
 **Claude Code дотор ажилладаг видео эдитийн skill.** Бараан ховилтой хана, налуу гэрэл, асар том гарчиг, сэнс шиг дэлгэгдсэн зургийн картууд. Студид хийсэн мэт.
 
 Reels, TikTok-д бэлэн 1080×1920 MP4 гаргана. GOAT Academy-гийн 14 эдитийн стилийн нэг.
