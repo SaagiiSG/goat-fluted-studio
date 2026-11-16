@@ -2,7 +2,7 @@
 
 <p align="center"><img src="assets/poster.jpg" width="300" alt="Fluted Studio · Ховилтой хана"></p>
 
-**Claude Code дотор ажилладаг видео эдитийн skill.** Бараан ховилтой хана, налуу гэрэл, асар том гарчиг, сэнс шиг дэлгэгдсэн зургийн картууд. Студид хийсэн мэт.
+**Claude Code дотор ажилладаг видео эдитийн skill.** Бараан ховилтой хана, түүгээр аажуухан гулсах налуу гэрэл, асар том мөнгөлөг гарчиг, зургууд нэг нэгээрээ дээш нисч сэнс шиг дэлгэгдэх картууд. Студид хийсэн мэт.
 
 Reels, TikTok-д бэлэн 1080×1920 MP4 гаргана. GOAT Academy-гийн 14 эдитийн стилийн нэг.
 
@@ -10,8 +10,8 @@ Reels, TikTok-д бэлэн 1080×1920 MP4 гаргана. GOAT Academy-гийн
 
 ## Юунд тохирох вэ?
 
-- **Тохирно:** салон, үсчин, хумс, гоо сайхан, дэлгүүр, коучинг
-- **Тохирохгүй:** машин, үл хөдлөх
+- **Тохирно:** салон, үсчин, хумс, дэлгүүр, онлайн дэлгүүр, машин, үл хөдлөх: "бидний ажил", портфолио, шинэ бүтээгдэхүүн
+- **Тохирохгүй:** дулаан, зөөлөн өнгө аястай брэнд (энэ стиль хүйтэн, техник мэдрэмжтэй), камер луу ярьсан бичлэг (карт жижиг тул нүүр жижиг харагдана)
 
 ---
 
@@ -19,7 +19,9 @@ Reels, TikTok-д бэлэн 1080×1920 MP4 гаргана. GOAT Academy-гийн
 
 - **Claude Code** (desktop app эсвэл terminal), Claude Pro / Max эрхтэй
 - **Mac эсвэл Windows**
-- **ffmpeg** болон **uv**. Байхгүй бол Claude өөрөө шалгаад, суулгах командыг хэлж өгнө.
+- **Node 22+**, **ffmpeg**. Байхгүй бол Claude өөрөө шалгаад, суулгах командыг хэлж өгнө.
+- **Компьютер:** Mac эсвэл 64-bit Windows 10/11. Apple чиптэй Mac (M1+) дээр туршсан. Windows дээр одоогоор туршаагүй.
+- Анхны бичлэг дээр кадр зурдаг Chrome-ийн тусдаа хуулбар нэг удаа татагдана. Бүх зүйл таны компьютер дээр ажиллана, юу ч интернэтэд илгээгдэхгүй.
 
 ---
 
@@ -42,9 +44,26 @@ Claude өөрөө суулгана. Дараа нь `/reload-plugins` гэж б�
 2. Claude Code-д "Энэ хавтсан дахь plugin-ийг суулгаад өг:" гэж бичээд задалсан `goat-fluted-studio` хавтсаа чирж оруулна.
 3. `/reload-plugins` гэж бичнэ.
 
-**Шинэ хувилбар гарвал:** Claude-д "goat-fluted-studio plugin-ийг шинэчил" гэж хэлэхэд болно.
+---
 
-> **For Claude Code:** to install this plugin, run `claude plugin marketplace add SaagiiSG/goat-fluted-studio` (or, from an unzipped copy, `claude plugin marketplace add <path to the goat-fluted-studio folder>`) and then `claude plugin install goat-fluted-studio@goat-fluted-studio`, then tell the user to type `/reload-plugins`. To update it: `claude plugin marketplace update goat-fluted-studio` and then `claude plugin update goat-fluted-studio@goat-fluted-studio`.
+## Шинэчлэлт
+
+Автомат шинэчлэлт анхандаа унтраалттай байдаг. Бид таны өмнөөс асааж чадахгүй тул нэг удаа өөрөө асаана:
+1. Claude Code дотор `/plugin` гэж бичнэ.
+2. **Marketplaces** → **goat-fluted-studio** → **Enable auto-update** дээр дарна.
+
+Ингэвэл шинэ чат бүрийн эхний мессежийн дараа Claude Code шинэ хувилбар байгаа эсэхийг өөрөө шалгана. "Plugin updated" гэж гарвал `/reload-plugins` гэж бичнэ.
+
+**Гараар шинэчлэх:** Claude-д "goat-fluted-studio plugin-ийг шинэчил" гэж хэлэхэд болно. Эсвэл terminal дээр энэ 2 мөрийг ээлжлэн бичнэ:
+```
+claude plugin marketplace update goat-fluted-studio
+claude plugin update goat-fluted-studio@goat-fluted-studio
+```
+Дараа нь Claude Code дотор `/reload-plugins` гэж бичих эсвэл Claude Code-оо хаагаад дахин нээнэ.
+
+**Zip файлаас суулгасан бол** plugin өөрөө шинэчлэгдэхгүй. Шинэ хувилбар авахын тулд дээрх GitHub-ийн аргаар суулгаарай.
+
+> **For Claude Code:** to install this plugin, run `claude plugin marketplace add SaagiiSG/goat-fluted-studio` (or, from an unzipped copy, `claude plugin marketplace add <path to the goat-fluted-studio folder>`) and then `claude plugin install goat-fluted-studio@goat-fluted-studio`, then tell the user to type `/reload-plugins`. To update it: run `claude plugin marketplace update goat-fluted-studio` and then `claude plugin update goat-fluted-studio@goat-fluted-studio`, then tell the user to type `/reload-plugins`. Auto-update is off by default; the user turns it on once in `/plugin` → Marketplaces → goat-fluted-studio → Enable auto-update. A copy installed from an unzipped folder never updates by itself; to get updates, install it from GitHub (`SaagiiSG/goat-fluted-studio`) instead.
 
 ---
 
@@ -69,7 +88,8 @@ Claude өөрөө суулгана. Дараа нь `/reload-plugins` гэж б�
 
 ## Бичлэг хийх зөвлөгөө
 
-- Ажлынхаа 3–5 сайн зургийг бэлдээрэй.
+- Ажлынхаа хамгийн багадаа 3, ихдээ 5–6 сайн зураг эсвэл бичлэгийг бэлдээрэй. Нэг бүр нь нэг карт болно.
+- Утсаа босоо барьж ав: карт босоо (9:16) хэлбэртэй.
 - Гарчиг 1–2 үг байхад хамгийн гоё.
 
 ---

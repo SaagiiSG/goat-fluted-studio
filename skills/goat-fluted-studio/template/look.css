@@ -1,0 +1,46 @@
+@font-face { font-family: "Cormorant Garamond"; src: url("fonts/CormorantGaramond-Italic%5Bwght%5D.ttf"); font-style: italic; font-weight: 300 700; }
+@font-face { font-family: "Oswald"; src: url("fonts/Oswald%5Bwght%5D.ttf"); font-weight: 200 700; }
+@font-face { font-family: "Inter"; src: url("fonts/Inter%5Bopsz,wght%5D.ttf"); font-weight: 100 900; }
+
+html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #141416; }
+#root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #141416; }
+.layer, #wall, #vig { position: absolute; inset: 0; }
+
+/* preview .fs .screen: 26 px flutes (dark, light at 13 px, darker), drawn at 1 CSS px = 1 output px */
+#wall { background: repeating-linear-gradient(90deg, #111113 0, #2A2A2E 13px, #0D0D0F 26px); }
+/* the preview's 115deg light split (clear to 52%, 10% white at 53%, 3.5% at 75%, clear at 90%) on a box 300 px
+   bigger each way, so it can drift without showing an edge: the stops are rescaled to the bigger box's gradient line
+   (2587 px against the screen's 1790 px), which keeps the light where the preview has it */
+#beam { position: absolute; left: -300px; top: -300px; width: 1680px; height: 2520px;
+  background: linear-gradient(115deg, rgba(255,255,255,0) 51.38%, rgba(255,255,255,.10) 52.08%, rgba(255,255,255,.035) 67.30%, rgba(255,255,255,0) 77.68%); }
+#vig { background: radial-gradient(ellipse at 50% 45%, rgba(0,0,0,0) 40%, rgba(0,0,0,.65)); }
+
+/* Words are centred on x 540 (look.js sets xPercent -50 and the top). */
+.kicker, .headline, .chip { position: absolute; left: 540px; top: 0; width: max-content; white-space: nowrap; }
+/* preview .it: Cormorant Garamond italic 400, 58 px, #EDEDED. Here 500 and up to 68 px, so the thin serif still
+   reads on a phone; a soft shadow keeps it clear of the beam. */
+.kicker { font: italic 500 68px/1 "Cormorant Garamond", serif; color: #EDEDED; text-shadow: 0 2px 18px rgba(0, 0, 0, .55); }
+/* preview .big: Oswald 700 in capitals, a silver gradient (#FFF to #B8BCC2) clipped to the letters. The 0.3 em
+   padding above and below keeps accents (Й Ё) and tails (Д Щ) inside the painted box; the gradient's stops are moved
+   to land on the letters where the preview's do. The first layer is a sheen look.js sweeps across once. */
+.headline { font: 700 230px/1 "Oswald", sans-serif; text-transform: uppercase; padding: 0.3em 0; color: transparent;
+  background-image: linear-gradient(100deg, rgba(255,255,255,0) 36%, rgba(255,255,255,.95) 50%, rgba(255,255,255,0) 64%),
+    linear-gradient(180deg, #FFFFFF 38%, #B8BCC2 80%);
+  --sheen: 100%; background-size: 250% 100%, 100% 100%; background-repeat: no-repeat; background-position: var(--sheen) 0%, 0% 0%;
+  -webkit-background-clip: text; background-clip: text; }
+/* preview .chipb: Inter 600 on rgba(20,22,28,.85), a #33363E edge, a 16 px blue dot with a glow. 28 px there; up to
+   36 px here (it is the smallest text), every part in em so the chip shrinks as one. */
+.chip { display: flex; align-items: center; gap: 0.5em; padding: 0.571em 0.857em; border-radius: 0.571em;
+  border: 2px solid #33363E; background: rgba(20, 22, 28, .85); font: 600 36px/1 "Inter", sans-serif; color: #fff; }
+.chip .dot { position: relative; flex: none; width: 0.571em; height: 0.571em; border-radius: 50%; background: #4DA3FF;
+  box-shadow: 0 0 0.571em #4DA3FF; }
+.chip .halo { position: absolute; left: 50%; top: 50%; width: 2.4em; height: 2.4em; margin: -1.2em 0 0 -1.2em;
+  border-radius: 50%; background: radial-gradient(circle, rgba(77, 163, 255, .6) 0, rgba(77, 163, 255, 0) 70%); }
+
+/* preview .card: 34% wide at 9:16 (368x654), radius 22, a 4 px 14% white edge, a deep shadow; it turns about its
+   bottom centre. The bottom sits on y 1050 (look.js FAN_Y), 64 px above the preview's, so the headline under the
+   fan stays inside the safe box. */
+.card { position: absolute; left: 356px; top: 396px; width: 368px; height: 654px; border-radius: 22px; overflow: hidden;
+  background: #0D0D0F; box-shadow: 0 24px 50px rgba(0, 0, 0, .6); transform-origin: 50% 100%; }
+.card video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.card::after { content: ""; position: absolute; inset: 0; border-radius: 22px; border: 4px solid rgba(255, 255, 255, .14); }
